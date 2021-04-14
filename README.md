@@ -1,4 +1,4 @@
-# GraphQL Album
+# GraphQL Playlist
 Simple graphql API to create a music albums
 
 ### Features
@@ -9,3 +9,5 @@ Simple graphql API to create a music albums
 * Get All albums
 * Delete a album
 * Update a album
+
+### Usage
