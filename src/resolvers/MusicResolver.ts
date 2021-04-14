@@ -19,7 +19,7 @@ export default class MusicResolver {
   }
 
   @Query(() => Music, { nullable: true })
-  async music(@Arg("musicId") musicId: string): Promise<Music | null> {
-    return this.musicService.findMusicById(musicId);
+  async music(@Arg("id") id: string): Promise<Music | null> {
+    return this.musicService.findMusicById(id);
   }
 }

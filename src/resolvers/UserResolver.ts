@@ -6,9 +6,9 @@ import UserService from "../services/UserService";
 @Service()
 @Resolver()
 export default class UserResolver {
-    constructor(private readonly userService : UserService) {}
-    @Query(() => [User])
-    async listUsers() : Promise<User[]> {
-        return [];
-    }
+  constructor(private readonly userService: UserService) {}
+  @Query(() => User, { nullable: true })
+  async me(): Promise<User | null> {
+    return null;
+  }
 }
