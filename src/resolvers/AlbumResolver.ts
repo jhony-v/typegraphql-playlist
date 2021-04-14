@@ -9,7 +9,7 @@ export default class AlbumResolver {
     constructor(private readonly albumService : AlbumService){}
 
     @Query(() => Album,{nullable:true})
-    async album(@Arg("id") id : number ) : Promise<Album | null> {
-        return null;
+    async album(@Arg("id") id : number = 0) : Promise<Album | null> {
+        return this.albumService.findAlbum(id);
     }
 }
