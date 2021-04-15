@@ -8,6 +8,12 @@ export class GetMusicFilterArgs {
   @Field(() => Int, { nullable: true })
   musicId?: number;
 
-  @Field(() => Int,{ nullable: true })
+  @Field(() => Int, { nullable: true })
   albumId?: number;
+}
+
+@ArgsType()
+export class GetAlbumFilterArgs {
+  @Field(() => Int, { nullable: true })
+  userId?: number;
 }

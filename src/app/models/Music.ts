@@ -23,6 +23,8 @@ export default class Music {
     minutesDuration : string;
 
     @Field(() => Album)
-    @ManyToOne(() => Album, album => album.musics)
+    @ManyToOne(() => Album, album => album.musics,{
+        cascade : true
+    })
     album: Album
 }

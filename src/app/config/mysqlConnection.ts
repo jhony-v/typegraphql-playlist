@@ -11,6 +11,6 @@ export const mysqlConnection = createConnection({
     synchronize : true,
     logging : false,
     entities : [
-        "src/models/**/*.ts"
+        "src/app/models/**/*.ts"
     ]
 })

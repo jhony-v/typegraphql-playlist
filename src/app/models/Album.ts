@@ -24,7 +24,9 @@ export default class Album {
     createdAt : string
 
     @Field(() => User)
-    @ManyToOne(() => User, user => user.albums)
+    @ManyToOne(() => User, user => user.albums,{
+        cascade : true
+    })
     user : User
 
     @Field(() => [Music])
