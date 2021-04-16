@@ -26,6 +26,10 @@ export default class User extends BaseEntity{
     isPersonal : boolean;
 
     @Field({nullable:true})
+    @Column()
+    password : string;
+
+    @Field({nullable:true})
     @CreateDateColumn()
     createdAt : string;
 

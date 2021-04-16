@@ -4,6 +4,7 @@ import { ApolloServer } from "apollo-server";
 import { buildSchema } from "type-graphql";
 import { mysqlConnection } from "./app/config/mysqlConnection";
 import authChecker from "./app/authorization/authChecker";
+import JsonWebTokenService from "./app/services/JsonWebTokenService";
 
 async function main() {
   try {
@@ -17,8 +18,9 @@ async function main() {
 
     const server = new ApolloServer({
       schema,
-      context : () => ({
-        username: "jhony"
+      context : ({req}) => ({
+        jsonTokenService : new JsonWebTokenService(),
+        request : req,
       })
     });
 

@@ -5,10 +5,10 @@
         "node": true
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "extends": [
-        "prettier",
         "eslint:recommended", 
         "plugin:@typescript-eslint/recommended"
     ]
